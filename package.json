@@ -1,0 +1,32 @@
+{
+  "name": "file-rev-replace-webpack-plugin",
+  "version": "0.0.1",
+  "description": "file content replace by file revision generate by webpack",
+  "main": "file-rev-replace-webpack-plugin.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sharonlx/file-rev-replace-webpack-plugin.git"
+  },
+  "keywords": [
+    "file",
+    "revision",
+    "replace",
+    "webpack",
+    "plugin"
+  ],
+  "author": "sharonli",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sharonlx/file-rev-replace-webpack-plugin/issues"
+  },
+  "homepage": "https://github.com/sharonlx/file-rev-replace-webpack-plugin#readme",
+  "dependencies": {
+    "packing-glob": "^1.0.1",
+    "lodash.endswith": "^4.1.0",
+    "mkdirp": "^0.5.1",
+    "object-assign": "^4.1.0"
+  }
+}
