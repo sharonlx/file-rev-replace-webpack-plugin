@@ -31,7 +31,7 @@ ReplaceHashPlugin.prototype.apply = function (compiler) {
     self.options.dest = path.isAbsolute(self.options.dest) ? self.options.dest : path.resolve(process.cwd(), self.options.dest);
 
     compiler.plugin('done', function (stats) {
-        var publicPath = compiler.options.output.publicPath;
+        var publicPath = self.options.publicPath || compiler.options.output.publicPath;
         var jsChunkFileName = compiler.options.output.filename;
         var cssChunkFileName = compiler.options.plugins[0].filename; // 找出ExtractTextPlugin插件在plugins中的位置
 
