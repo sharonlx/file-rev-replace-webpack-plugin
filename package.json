@@ -1,6 +1,6 @@
 {
   "name": "file-rev-replace-webpack-plugin",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "file content replace by file revision generate by webpack",
   "main": "file-rev-replace-webpack-plugin.js",
   "scripts": {

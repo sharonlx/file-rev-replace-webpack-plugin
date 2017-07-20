@@ -96,9 +96,14 @@ ReplaceHashPlugin.prototype.apply = function (compiler) {
                 }
                 var hashLengthMatches = filename.match(/\[\S*hash:(\d+)\]/i);
                 var hashLength;
-                if (hashLengthMatches) {
-                    if (hashLengthMatches[1]) {
+                if (hashLengthMatches || self.options.devMode) {
+                    if (hashLengthMatches
+                        && hashLengthMatches.length
+                        && hashLengthMatches[1]) {
                         hashLength = hashLengthMatches[1];
+                    }
+                    else {
+                        hashLength = 0;
                     }
 
                     var regString = filename
@@ -114,9 +119,10 @@ ReplaceHashPlugin.prototype.apply = function (compiler) {
                         var oldFilename = matches[1] + ext;
                         var oldPath = oldFilename;
                         var newPath = publicPath + item;
-                        console.log('---------------replace-------------');
-                        console.log(newPath);
-                        console.log('---------------replace-------------');
+                        // console.log('---------------replace start-------------');
+                        // console.log(oldPath);
+                        // console.log(newPath);
+                        // console.log('---------------replace end-------------');
                         data = self.doReplace(oldPath, newPath, data);
                     } else {
                         console.log('[warnings]%s replace hash failed.', item);
